@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/spilliton/fix_microsoft_links"
   s.summary     = "Fixes redirects to login pages when a user clicks a link to your site from a Microsoft application like Word or Excel"
   s.files       = [
-                  "lib/init.rb",
+                  "init.rb",
                   "lib/fix_microsoft_links.rb",
                   "lib/fix_microsoft_links/railtie.rb"]
  
