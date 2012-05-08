@@ -1,0 +1,1 @@
+require 'fix_microsoft_links'
