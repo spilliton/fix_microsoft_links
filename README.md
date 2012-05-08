@@ -28,3 +28,9 @@ Rails::Initializer.run do |config|
   config.middleware.insert_after Rack::Lock, FixMicrosoftLinks::Rack::Response
 # more init code....
 ```
+
+## Thanks
+
+To my employer [Moxie Software][moxiesoft], that sponsored the creation of this gem :)
+
+[moxiesoft]: http://www.moxiesoft.com/
