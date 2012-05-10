@@ -8,7 +8,7 @@ module FixMicrosoftLinks
       def call(env)
         # Clicking a URL from Microsoft apps will redirect you to login to already authenticated sites otherwise :(
         # http://support.microsoft.com/kb/899927
-        if env["HTTP_USER_AGENT"] =~ /[^\w](Word|Excel|PowerPoint|Outlook)[^\w]/
+        if env["HTTP_USER_AGENT"] =~ /[^\w](Word|Excel|PowerPoint|Outlook|ms-office)([^\w]|\z)/
           body = StringIO.new("<html><head><meta http-equiv='refresh' content='0'/></head><body></body></html>")
           return [200, {"Content-Type" => "text/html"}, body]
         end
