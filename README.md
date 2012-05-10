@@ -13,7 +13,7 @@ fix_microsoft_links is rack middleware that checks the http user agent to see if
 
 ``` ruby
 # Add the following to you Gemfile
-gem 'fix_microsoft_link'
+gem 'fix_microsoft_links'
 # Update your bundle
 bundle install
 ```
