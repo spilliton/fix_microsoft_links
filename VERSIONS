@@ -1,3 +1,5 @@
+0.1.2 - Excluding outlook, was breaking calendar support (.ics files)
+
 0.1.1 - Was only working for MS Office on Mac, should work for MS Office on PC now
 
 0.1.0 - First version!
