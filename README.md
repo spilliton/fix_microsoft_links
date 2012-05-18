@@ -1,6 +1,8 @@
 fix_microsoft_links
 ===================
 
+[![Build Status](https://secure.travis-ci.org/spilliton/fix_microsoft_links.png)](http://travis-ci.org/spilliton/fix_microsoft_links)
+
 Experiencing redirects to login pages when a user clicks a link to your site from a Microsoft application like Word or Excel?
 
 This gem for rails will fix that right up!  Here is some background on the issue:
