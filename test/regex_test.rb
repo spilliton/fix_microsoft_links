@@ -16,6 +16,8 @@ class RegexTest < Test::Unit::TestCase
     assert_match "Mozilla/5.0 (Macintosh; Intel Mac OS X) Word/14.20.0"
     assert_match "Mozilla/5.0 (Macintosh; Intel Mac OS X) Excel/14.20.0"
     assert_match "Mozilla/5.0 (Macintosh; Intel Mac OS X) PowerPoint/14.20.0"
+    # some others on windows 7
+    assert_match "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; ms-office)"
   end
 
   def test_others
