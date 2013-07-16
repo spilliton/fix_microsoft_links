@@ -1,5 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "fix_microsoft_links"
+  s.license     = 'MIT'
   s.version     = "0.1.3"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Zachary Kloepping", "Jon Bell"]
