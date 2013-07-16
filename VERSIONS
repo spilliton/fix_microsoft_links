@@ -1,3 +1,5 @@
+0.1.3 - Support for Rails 4.  Thanks lilitSocial :)
+
 0.1.2 - Excluding outlook, was breaking calendar support (.ics files)
 
 0.1.1 - Was only working for MS Office on Mac, should work for MS Office on PC now

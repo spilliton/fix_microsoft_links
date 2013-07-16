@@ -1,7 +1,9 @@
 fix_microsoft_links
 ===================
 
+[![Gem Version](https://badge.fury.io/rb/fix_microsoft_links.png)](http://badge.fury.io/rb/fix_microsoft_links)
 [![Build Status](https://secure.travis-ci.org/spilliton/fix_microsoft_links.png)](http://travis-ci.org/spilliton/fix_microsoft_links)
+[![Code Climate](https://codeclimate.com/github/spilliton/fix_microsoft_links.png)](https://codeclimate.com/github/spilliton/fix_microsoft_links)
 
 Experiencing redirects to login pages when a user clicks a link to your site from a Microsoft application like Word or Excel?
 
