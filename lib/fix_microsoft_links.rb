@@ -2,20 +2,26 @@ module FixMicrosoftLinks
   module Rack
     class Response
       USER_AGENTS_REGEX = /[^\w](Word|Excel|PowerPoint|ms-office)([^\w]|\z)/
+      EXCLUDE_USER_AGENTS_REGEX = /Microsoft Outlook/
 
-      def initialize(app)  
-        @app = app  
-      end  
+      def initialize(app)
+        @app = app
+      end
 
       def call(env)
         # Clicking a URL from Microsoft apps will redirect you to login to already authenticated sites otherwise :(
         # http://support.microsoft.com/kb/899927
-        if env["HTTP_USER_AGENT"] =~ USER_AGENTS_REGEX
+        if matching_user_agent?(env["HTTP_USER_AGENT"])
           body = StringIO.new("<html><head><meta http-equiv='refresh' content='0'/></head><body></body></html>")
           return [200, {"Content-Type" => "text/html"}, body]
         end
         @app.call(env)
       end
+
+      def matching_user_agent?(user_agent)
+        (user_agent =~ USER_AGENTS_REGEX) && !(user_agent =~ EXCLUDE_USER_AGENTS_REGEX)
+      end
+
     end
   end
 end
