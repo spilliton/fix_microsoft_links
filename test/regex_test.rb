@@ -4,11 +4,9 @@ require 'fix_microsoft_links'
 
 class RegexTest < Test::Unit::TestCase
 
-  REGEX = FixMicrosoftLinks::Rack::Response::USER_AGENTS_REGEX
-
-
   def test_outook
     assert_no_match "Microsoft Office/14.0 (Windows NT 6.0; Microsoft Outlook 14.0.4760; Pro)"
+    assert_no_match "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; InfoPath.3; Microsoft Outlook 14.0.6131; ms-office; MSOffice 14)"
   end
 
   def test_other_microsoft_apps
@@ -29,12 +27,11 @@ class RegexTest < Test::Unit::TestCase
   private
 
   def assert_match(user_agent)
-    assert user_agent =~ REGEX, "Expected middleware to apply to user agent: #{user_agent}"
+    assert FixMicrosoftLinks::Rack::Response.new(nil).matching_user_agent?(user_agent), "Expected middleware to apply to user agent: #{user_agent}"
   end
 
   def assert_no_match(user_agent)
-    assert !(user_agent =~ REGEX), "Did not expect middleware to apply to user agent: #{user_agent}"
+    assert !FixMicrosoftLinks::Rack::Response.new(nil).matching_user_agent?(user_agent), "Did not expect middleware to apply to user agent: #{user_agent}"
   end
-
 
 end
