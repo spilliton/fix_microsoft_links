@@ -1,7 +1,7 @@
 module FixMicrosoftLinks
   module Rack
     class Response
-      USER_AGENTS_REGEX = /[^\w](Word|Excel|PowerPoint|ms-office)([^\w]|\z)/
+      USER_AGENTS_REGEX = /[^\w](Word|Excel|PowerPoint|ms-office|Konqueror)([^\w]|\z)/
       EXCLUDE_USER_AGENTS_REGEX = /Microsoft Outlook/
 
       def initialize(app)
