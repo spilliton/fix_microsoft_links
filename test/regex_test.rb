@@ -27,7 +27,7 @@ class RegexTest < Test::Unit::TestCase
 
   def test_others
     assert_no_match "aldsfjlkads asdljfjl Words"
-    assert_no_match "1.5 - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) konqueror/4.14.22 Safari/537.21"
+    assert_no_match "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) konqueror/4.14.22 Safari/537.21"
     assert_no_match "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.46 Safari/536.5"
   end
 
