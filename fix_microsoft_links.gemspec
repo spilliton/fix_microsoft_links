@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = "fix_microsoft_links"
   s.license     = 'MIT'
-  s.version     = "0.1.4"
+  s.version     = "0.1.5"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Zachary Kloepping", "Jon Bell"]
   s.homepage    = "https://github.com/spilliton/fix_microsoft_links"
