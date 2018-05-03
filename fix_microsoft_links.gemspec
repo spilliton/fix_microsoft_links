@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = "fix_microsoft_links"
   s.license     = 'MIT'
-  s.version     = "0.1.5"
+  s.version     = "0.1.6"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Zachary Kloepping", "Jon Bell"]
   s.homepage    = "https://github.com/spilliton/fix_microsoft_links"
@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
                   "init.rb",
                   "lib/fix_microsoft_links.rb",
                   "lib/fix_microsoft_links/railtie.rb"]
- 
+
   s.add_dependency('rack', [">= 1.1.1"])
 end
